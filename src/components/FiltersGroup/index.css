@@ -1,0 +1,36 @@
+.filters-group-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+}
+.search-input-container {
+  display: none;
+}
+.hr-line {
+  border: 1px solid #e6ffff;
+  width: 15vw;
+}
+.employment-type-container {
+  display: flex;
+  flex-direction: column;
+}
+.employment-heading {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+.types-list-container {
+  padding-left: 0px;
+}
+.salary-ranges-container {
+  display: flex;
+  flex-direction: column;
+}
+.salary-range {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+.list-container {
+  padding-left: 0px;
+}

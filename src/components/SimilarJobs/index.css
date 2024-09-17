@@ -1,0 +1,18 @@
+.similar-jobs-list-item {
+  background-color: #404040;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.job-description-heading {
+  font-size: 18px;
+}
+.description {
+  font-size: 15px;
+}

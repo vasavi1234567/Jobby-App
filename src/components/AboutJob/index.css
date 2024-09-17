@@ -1,0 +1,116 @@
+.job-details-view-container {
+  background-color: black;
+  margin: 20px;
+}
+.job-details-bg {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.list-item {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-size: cover;
+  border: none;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.top-details-container {
+  display: flex;
+  flex-direction: column;
+}
+.logo-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.company-logo {
+  height: 10vh;
+  margin-right: 10px;
+}
+.title-rating-container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.jobs-title {
+  font-size: 22px;
+  color: rgb(14, 13, 13);
+}
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.rating-icon {
+  color: #ffcc00;
+  margin-right: 7px;
+}
+.rating {
+  color: black;
+}
+.location-package-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+}
+.location-job-type-container {
+  display: flex;
+  flex-direction: row;
+}
+.location-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+.location-icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.job-type-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.line {
+  border: 1px solid black;
+  width: 71vw;
+}
+.middle-details-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.description-visit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.description-heading {
+  margin-left: 20px;
+}
+.visit {
+  text-decoration: none;
+}
+.description {
+}
+.skills-list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.list-item {
+}
+.skill-image {
+}
+.life-at-company-details-container {
+}
+.heading-description-container {
+}
+.similar-jobs-heading {
+}
+.similar-jobs-list-container {
+}
