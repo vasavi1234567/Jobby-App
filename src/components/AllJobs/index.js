@@ -361,7 +361,7 @@ class AllJobs extends Component {
                 onKeyDown={this.onEnterSearchInput}
               />
               <button
-                text="label"
+                label="text"
                 className="search-button"
                 data-testid="searchButton"
                 type="button"

@@ -65,7 +65,7 @@ class Profile extends Component {
       />
       <h1 className="failure-heading">Oops! Something Went Wrong</h1>
       <p className="failure-description">
-        We cannot seem to find the page you are lookin for.
+        We cannot seem to find the page you are lookin for
       </p>
       <button
         className="retry-button"

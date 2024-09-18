@@ -104,7 +104,7 @@ class JobItemDetails extends Component {
         />
         <h1 className="failure-view-heading">Oops! Something Went Wrong</h1>
         <p className="failure-view-description">
-          We cannot seem to find the page you are looking for.
+          We cannot seem to find the page you are looking for
         </p>
         <button
           className="retry-button"

@@ -9,14 +9,14 @@ const FiltersGroup = props => {
   }
 
   const onEnterSearchInput = event => {
-    const {jobs} = props
+    const {getJobs} = props
     if (event.key === 'Enter') {
-      jobs()
+      getJobs()
     }
   }
 
   const renderSearchInput = () => {
-    const {jobs, searchInput} = props
+    const {getJobs, searchInput} = props
     return (
       <div className="search-input-container">
         <input
@@ -33,12 +33,22 @@ const FiltersGroup = props => {
           className="search-button"
           type="button"
           id="searchButton"
-          onClick={jobs}
+          onClick={getJobs}
         >
           <BsSearch className="search-icon" />
         </button>
       </div>
     )
+  }
+
+  const onSelectEmploymentType = event => {
+    const {changeEmployeeList} = props
+    changeEmployeeList(event.target.value)
+  }
+
+  const onSelectLocation = event => {
+    const {changeLocation} = props
+    changeLocation(event.target.value)
   }
 
   const renderEmploymentType = () => {
@@ -47,29 +57,20 @@ const FiltersGroup = props => {
       <div className="employment-type-container">
         <h1 className="employment-heading">Type of Employment</h1>
         <ul className="types-list-container">
-          {employmentTypesList.map(jobType => {
-            const {changeEmployeeList} = props
-            const selectJobType = event => {
-              changeEmployeeList(event.target.value)
-            }
-            return (
-              <li
-                className="job-item"
-                key={jobType.employmentTypeId}
-                onChange={selectJobType}
-              >
-                <input
-                  className="input"
-                  type="checkbox"
-                  id={jobType.employmentTypeId}
-                  value={jobType.employmentTypeId}
-                />
-                <label className="label" htmlFor={jobType.employmentTypeId}>
-                  {jobType.label}
-                </label>
-              </li>
-            )
-          })}
+          {employmentTypesList.map(jobType => (
+            <li className="job-item" key={jobType.employmentTypeId}>
+              <input
+                className="input"
+                type="checkbox"
+                id={jobType.employmentTypeId}
+                value={jobType.employmentTypeId}
+                onChange={onSelectEmploymentType}
+              />
+              <label className="label" htmlFor={jobType.employmentTypeId}>
+                {jobType.label}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
     )
@@ -109,6 +110,31 @@ const FiltersGroup = props => {
     )
   }
 
+  const renderLocations = () => {
+    const {Locations} = props
+    return (
+      <div className="employment-type-container">
+        <h1 className="employment-heading">Locations</h1>
+        <ul className="types-list-container">
+          {Locations.map(jobType => (
+            <li className="job-item" key={jobType.locationId}>
+              <input
+                className="input"
+                type="checkbox"
+                id={jobType.locationId}
+                value={jobType.locationId}
+                onChange={onSelectLocation}
+              />
+              <label className="label" htmlFor={jobType.locationId}>
+                {jobType.label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
   return (
     <div className="filters-group-container">
       {renderSearchInput()}
@@ -117,6 +143,8 @@ const FiltersGroup = props => {
       {renderEmploymentType()}
       <hr className="hr-line" />
       {renderSalaryRange()}
+      <hr className="hr-line" />
+      {renderLocations()}
     </div>
   )
 }

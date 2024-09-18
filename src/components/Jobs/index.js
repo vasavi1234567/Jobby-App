@@ -46,6 +46,11 @@ const salaryRangesList = [
   },
 ]
 
+const Locations = [
+  {label: 'Hyderabad', locationId: '1'},
+  {label: 'Delhi', locationId: '2'},
+]
+
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -139,7 +144,7 @@ class Jobs extends Component {
       />
       <h1 className="failure-heading">Oops! Something Went Wrong</h1>
       <p className="failure-description">
-        We cannot seem to find the page you are lookin for.
+        We cannot seem to find the page you are lookin for
       </p>
       <button
         className="retry-button"
@@ -215,6 +220,7 @@ class Jobs extends Component {
                 changeSearchInput={this.changeSearchInput}
                 changeSalary={this.changeSalary}
                 changeEmplyeeList={this.changeEmplyeeList}
+                Locations={Locations}
               />
             </div>
             <div className="jobs-search-container">
